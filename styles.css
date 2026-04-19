@@ -1,0 +1,291 @@
+/* Sports Leaderboard Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px 0;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    background: linear-gradient(180deg, #ffd700 0%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.file-info {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.file-info strong {
+    color: #00d9ff;
+}
+
+.file-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+.file-upload:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.5);
+}
+
+.file-upload input {
+    display: none;
+}
+
+.sort-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #00d9ff 0%, #00a8cc 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+}
+
+.sort-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 217, 255, 0.4);
+}
+
+/* Leaderboard */
+.leaderboard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 60px 70px 70px 70px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.leaderboard-body .row {
+    display: grid;
+    grid-template-columns: 50px 1fr 60px 70px 70px 70px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.leaderboard-body .row:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.leaderboard-body .row:last-child {
+    border-bottom: none;
+}
+
+/* Rank styling */
+.col.rank {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.row:nth-child(1) .rank { color: #ffd700; }
+.row:nth-child(2) .rank { color: #c0c0c0; }
+.row:nth-child(3) .rank { color: #cd7f32; }
+
+.row:nth-child(1) {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, transparent 100%);
+}
+
+.row:nth-child(2) {
+    background: linear-gradient(90deg, rgba(192, 192, 192, 0.1) 0%, transparent 100%);
+}
+
+.row:nth-child(3) {
+    background: linear-gradient(90deg, rgba(205, 127, 50, 0.1) 0%, transparent 100%);
+}
+
+/* Team name */
+.col.team {
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Team logo image */
+.team-logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2px;
+    background: #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    vertical-align: middle;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e94560 0%, #00d9ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+/* Stats columns */
+.col {
+    text-align: center;
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+.col.pts, .col.pf, .col.pa {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.col.pts {
+    color: #00d9ff;
+}
+
+.col.pct {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffd700;
+}
+
+/* Loading */
+.loading {
+    display: none;
+    text-align: center;
+    padding: 40px;
+}
+
+.loading.active {
+    display: block;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #e94560;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .leaderboard-header,
+    .leaderboard-body .row {
+        grid-template-columns: 40px 1fr 50px 60px;
+    }
+    
+    .leaderboard-header .col.pa,
+    .leaderboard-header .col.pct,
+    .leaderboard-body .row .col.pa,
+    .leaderboard-body .row .col.pct {
+        display: none;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .file-upload, .sort-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboard-header,
+    .leaderboard-body .row {
+        grid-template-columns: 35px 1fr 45px;
+    }
+    
+    .leaderboard-header .col.pf,
+    .leaderboard-body .row .col.pf {
+        display: none;
+    }
+}
