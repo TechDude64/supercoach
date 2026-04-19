@@ -173,7 +173,10 @@ body {
     font-size: 1.05rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+
+.col.team span {
+    margin-left: 12px;
 }
 
 /* Team logo image */
@@ -258,13 +261,11 @@ body {
     
     .leaderboard-header,
     .leaderboard-body .row {
-        grid-template-columns: 40px 1fr 50px 60px;
+        grid-template-columns: 40px 1fr 50px 60px 60px;
     }
     
     .leaderboard-header .col.pa,
-    .leaderboard-header .col.pct,
-    .leaderboard-body .row .col.pa,
-    .leaderboard-body .row .col.pct {
+    .leaderboard-body .row .col.pa {
         display: none;
     }
     
@@ -281,7 +282,7 @@ body {
 @media (max-width: 480px) {
     .leaderboard-header,
     .leaderboard-body .row {
-        grid-template-columns: 35px 1fr 45px;
+        grid-template-columns: 35px 1fr 45px 55px;
     }
     
     .leaderboard-header .col.pf,

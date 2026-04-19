@@ -135,7 +135,7 @@ function App() {
                   ) : (
                     <div className="team-logo">?</div>
                   )}
-                  <span style={{ marginLeft: '8px' }}>{teamName}</span>
+                  <span>{teamName}</span>
                 </div>
                 <div className="col pts">{row.points}</div>
                 <div className="col pf">{row.pointsFor || 0}</div>
